@@ -58,3 +58,61 @@ def when_start():
             while ArduinoExt.digitalRead(2):
                 Entry.show()
             Entry.hide()
+            
+            
+            
+# Entrybot's Python code
+# tugmalar yordamida pionino yasash
+
+import Entry
+
+def when_start():
+    while True:
+        if ArduinoExt.digitalRead(3):
+            Entry.play_sound("Pianino_04 do")
+            while ArduinoExt.digitalRead(3):
+                Entry.show()
+            Entry.hide()
+        if ArduinoExt.digitalRead(4):
+            Entry.play_sound("Pianino_05re")
+            while ArduinoExt.digitalRead(4):
+                Entry.show()
+            Entry.hide()
+        if ArduinoExt.digitalRead(5):
+            Entry.play_sound("Pianino_16mi")
+            while ArduinoExt.digitalRead(5):
+                Entry.show()
+            Entry.hide()
+        if ArduinoExt.digitalRead(6):
+            Entry.play_sound("Pianino_08fa")
+            while ArduinoExt.digitalRead(6):
+                Entry.show()
+            Entry.hide()
+        if ArduinoExt.digitalRead(12):
+            Entry.play_sound("Pianino_08sol")
+            while ArduinoExt.digitalRead(12):
+                Entry.show()
+            Entry.hide()
+            
+            
+            
+# mator Yurayotgan ko'rinish's Python code
+
+import Entry
+import ArduinoExt
+
+
+def when_press_key("A"):
+    while True:
+        ArduinoExt.analogWrite(5, 255)
+        ArduinoExt.analogWrite(3, 0)
+
+def when_press_key("S"):
+    while True:
+        ArduinoExt.analogWrite(5, 0)
+        ArduinoExt.analogWrite(3, 0)
+
+def when_press_key("D"):
+    while True:
+        ArduinoExt.analogWrite(5, 0)
+        ArduinoExt.analogWrite(3, 255)

@@ -16,3 +16,17 @@ void loop() {
 		digitalWrite(3, HIGH);
 	}
 }
+
+
+// Created by Entry
+// mator yurg'azish kodi 
+
+void setup() {
+	pinMode(3, OUTPUT);
+	pinMode(5, OUTPUT);
+}
+
+void loop() {
+	analogWrite(5, 255);
+	analogWrite(3, 0);
+}
